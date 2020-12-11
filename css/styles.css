@@ -46,6 +46,14 @@ body {
   display: block;
 }
 
+.text-red{
+  color: red;
+}
+
+.text-green{
+  color: green;
+}
+
 @media only screen and (max-width: 990px){
   body{
     font-size: 14px;

@@ -1,3 +1,25 @@
+// Exercise 1
+var celcy = '';
+var farengey = '';
+
+var elTempForm = document.querySelector('.temp-form');
+var elCelcyInput = elTempForm.querySelector('.celcy-input');
+var elFarengeyInput = elTempForm.querySelector('.farengey-input');
+var elResult = document.querySelector('.reslut');
+
+elTempForm.addEventListener('submit', function (evt){
+  evt.preventDefault();
+  
+  celcy = parseFloat(elCelcyInput.value.trim(), 10);
+  celcy = parseFloat(celcy.toFixed(1), 10);
+  farengey = parseFloat((celcy * 9 / 5) + 32, 10);
+  farengey = parseFloat(farengey.toFixed(1), 10);
+  
+  elFarengeyInput.value = `${farengey}`;
+});
+
+
+//Exercise2
 var elDistanceForm = document.querySelector('.distance-form');
 var elDistanceInput = elDistanceForm.querySelector('.distance-input');
 
@@ -55,3 +77,45 @@ elDistanceForm.addEventListener('submit', function (evt) {
   }
 });
 
+
+//Exercise3
+var elJogForm = document.querySelector('.jog-form');
+var elTempInput = elJogForm.querySelector('.temp-input');
+var elRainCheckbox = elJogForm.querySelector('.rain-checkbox');
+var elOpenCheckbox = elJogForm.querySelector('.open-checkbox');
+
+var elAnswerBox = document.querySelector('.answer-box');
+var elYes = elAnswerBox.querySelector('.yes');
+var elNo = elAnswerBox.querySelector('.no');
+
+var temperature = '';
+
+elJogForm.addEventListener('change', function (){
+  temperature = Number(elTempInput.value);
+
+  elYes.classList.remove('text-green');
+  elNo.classList.remove('text-red');
+
+  if (temperature >= 5 && temperature <= 30){
+    elYes.classList.add('text-green');
+    elNo.classList.remove('text-red');
+  }else{
+    elNo.classList.add('text-red');
+  }
+  
+  if (elRainCheckbox.checked){
+    elNo.classList.add('text-red');
+    elYes.classList.remove('text-green');
+  }
+  
+  if (elRainCheckbox.checked && elOpenCheckbox.checked){
+    elYes.classList.add('text-green');
+    elNo.classList.remove('text-red');
+  }
+  
+  if (temperature < 5 && elOpenCheckbox.checked){
+    elNo.classList.add('text-red');
+    elYes.classList.remove('text-green');
+  }
+  
+});

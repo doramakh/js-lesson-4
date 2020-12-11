@@ -14,48 +14,50 @@
 
   <div class="container container-lg">
     <div class="exercise text-center mb-5">
-      <h2 class="heading mb-3 text-danger">Kim birinchi bo-rish-ga!</h2>
+      <h2 class="heading mb-3 text-danger">Who goes first ?!</h2>
       
       <form class="distance-form w-75 mb-3 row mx-auto bg-light px-3 py-4" action="https://echo.htmlacademy.ru" method="POST">
         
         <div class="form-group mb-0 pl-0 col-7 d-flex align-items-center">
-          <label class="distance-label m-0 mr-4 pl-0" for="distance-input">Masofa</label>
+          <label class="distance-label m-0 mr-4 pl-0" for="distance-input">Distance</label>
           <input class="form-control distance-input d-block" type="number" id="distance-input" name="distance" placeholder="100km" step="any" required>
         </div>
         
-        <button class="btn btn-success col-5" type="submit">Hisobla</button>
+        <button class="btn btn-success col-5" type="submit">Calculate</button>
       </form>
       
       <div class="results row text-info">
         <div class="result col-6 mb-3">
           <div class="border rounded py-3">
             <span class="d-block material-icons mb-1">directions_run</span>
-            <span class="d-block type">Piyoda</span>
-            <span class="d-block text-success time walk-time">N Soat</span>
+            <span class="d-block type">Walk</span>
+            <span class="d-block text-success time walk-time">n Hours</span>
           </div>
         </div>
         <div class="result col-6 mb-3">
           <div class="border rounded py-3">
             <span class="d-block material-icons mb-1">pedal_bike</span>
-            <span class="d-block type">Velosiped</span>
-            <span class="d-block text-success time bike-time">N Soat</span>
+            <span class="d-block type">Bike</span>
+            <span class="d-block text-success time bike-time">n Hours</span>
           </div>
         </div>
         <div class="result col-6 mb-3">
           <div class="border rounded py-3">
             <span class="d-block material-icons mb-1">directions_car</span>
-            <span class="d-block type">Mashina</span>
-            <span class="d-block text-success time car-time">N Soat</span>
+            <span class="d-block type">Car</span>
+            <span class="d-block text-success time car-time">n Hours</span>
           </div>
         </div>
         <div class="result col-6 mb-3">
           <div class="border rounded py-3">
             <span class="d-block material-icons mb-1">flight</span>
-            <span class="d-block type">Samalyot</span>
-            <span class="d-block text-success time plane-time">N Soat</span>
+            <span class="d-block type">Airplane</span>
+            <span class="d-block text-success time plane-time">n Hours</span>
           </div>
         </div>
       </div>
+
+      <div class="error-message w-100 p-3"></div>
     </div>
 
   

@@ -11,7 +11,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "Arial", sans-serif;
+  font-family: "Livvic", "Times New Roman", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -36,4 +36,56 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.material-icons{
+  font-size: 56px;
+}
+
+.reslut{
+  display: block;
+}
+
+@media only screen and (max-width: 990px){
+  body{
+    font-size: 14px;
+  }
+
+  .heading{
+    font-size: 28px;
+  }
+
+  .btn{
+    font-size: 14px;
+  }
+
+  .material-icons{
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  body{
+    font-size: 12px;
+  }
+
+  .heading{
+    font-size: 24px;
+  }
+
+  .btn{
+    font-size: 12px;
+  }
+
+  .material-icons{
+    font-size: 28px;
+  }
+
+  .distance-label{
+    display: none;
+  }
+
+  input::placeholder{
+    font-size: 12px;
+  }
 }
